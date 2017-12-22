@@ -8,17 +8,17 @@ var Submission = require('./model/submissions');
 var app = express();
 var router = express.Router();
 
-var port = process.env.API_PORT || 3001;
+var port = process.env.PORT || 3001;
 
 var mongoDB = 'mongodb://trevoraquino:melrose23@ds157653.mlab.com:57653/housingpreference';
 mongoose.connect(mongoDB, {useMongoClient: true})
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.use(express.static('build'));
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+app.use(express.static('build'));
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
