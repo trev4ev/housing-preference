@@ -1,2 +1,2 @@
-web: node server.js
+web: npm run server
 api: nodemon server.js
