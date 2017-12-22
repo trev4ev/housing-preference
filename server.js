@@ -40,7 +40,7 @@ router.route('/submissions')
         submission.save(function(err) {
             if (err)
                 res.send(err);
-            res.json({ message: 'Submission added!'});
+            res.json({ message: 'Submission added'});
         });
     });
 
