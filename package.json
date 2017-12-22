@@ -16,8 +16,8 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
+    "start": "concurrently \"npm run server\" \"react-scripts start\"",
     "deploy": "npm run build&&gh-pages -d build",
-    "start": "react-scripts start",
     "start-dev": "nf start -p 3000",
     "server": "node server.js",
     "build": "react-scripts build",
@@ -26,6 +26,7 @@
   },
   "homepage": "https://trev4ev.github.io/housing-preference",
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "gh-pages": "^1.1.0"
   }
 }
