@@ -15,6 +15,10 @@ mongoose.connect(mongoDB, {useMongoClient: true})
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+}
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
