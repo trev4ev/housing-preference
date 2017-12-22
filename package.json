@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "foreman": "^2.0.0",
+    "marked": "^0.3.7",
+    "mongoose": "^4.13.7",
+    "nodemon": "^1.14.1",
     "react": "^16.2.0",
     "react-beautiful-dnd": "^3.0.0",
     "react-dom": "^16.2.0",
@@ -11,9 +18,13 @@
   "scripts": {
     "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
+    "start-dev": "nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://trev4ev.github.io/housing-preference"
+  "homepage": "https://trev4ev.github.io/housing-preference",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
 }
