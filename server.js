@@ -10,7 +10,7 @@ var router = express.Router();
 
 var port = process.env.PORT || 3001;
 
-var mongoDB = 'mongodb://trevoraquino:melrose23@ds157653.mlab.com:57653/housingpreference';
+var mongoDB = 'mongodb://<USERNAME>:<PASSWORD>@ds157653.mlab.com:57653/housingpreference';
 mongoose.connect(mongoDB, {useMongoClient: true})
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
